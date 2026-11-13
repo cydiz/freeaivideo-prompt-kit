@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "mode": "image-to-image",
+  "subject": "A handmade ceramic cup on a wooden table",
+  "action": "A quiet product still life",
+  "setting": "A small studio with a plain background",
+  "camera": "Eye-level close-up",
+  "lighting": "Soft window light from the left",
+  "style": "Natural textures, warm neutral colors",
+  "avoid": "Added logos or lettering",
+  "reference": "my-authorized-cup-photo.png"
+}

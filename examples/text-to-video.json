@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "mode": "text-to-video",
+  "subject": "A handmade ceramic cup on a wooden table",
+  "action": "Steam rises gently; the cup stays still",
+  "setting": "A small studio with a plain background",
+  "camera": "One slow push-in, single shot",
+  "lighting": "Soft window light from the left",
+  "style": "Natural textures, warm neutral colors",
+  "avoid": "Added logos or lettering"
+}

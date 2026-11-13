@@ -1,0 +1,46 @@
+{
+  "name": "freeaivideo-prompt-kit",
+  "version": "0.1.0",
+  "description": "Offline creative brief validation, prompt assembly and Markdown export for video and image planning.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Free AI Video",
+  "homepage": "https://freeaivideo.art",
+  "engines": {
+    "node": ">=20"
+  },
+  "exports": "./src/index.js",
+  "bin": {
+    "freeaivideo-prompt-kit": "bin/cli.js"
+  },
+  "files": [
+    "src/index.js",
+    "bin/cli.js",
+    "examples/*.json",
+    "docs/*.md",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test",
+    "prepublishOnly": "npm test"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "keywords": [
+    "creative-brief",
+    "prompt",
+    "offline",
+    "video",
+    "image"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cydiz/freeaivideo-prompt-kit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/cydiz/freeaivideo-prompt-kit/issues"
+  }
+}
