@@ -1,0 +1,8 @@
+*
+!Dockerfile
+!package.json
+!LICENSE
+!src/
+!src/index.js
+!bin/
+!bin/cli.js

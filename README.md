@@ -102,3 +102,15 @@ MIT applies only to the original tool, examples and tutorials in this independen
 `npm test` covers all four modes, malformed inputs, Unicode, bounds, Markdown escaping, files/stdin and CLI exit codes. JSON must use double quotes and cannot contain comments. Quote file paths containing spaces. A reference reminder does not prove an image was uploaded. Website errors cannot be fixed by changing account credits through this tool.
 
 Report reproducible issues through [GitHub Issues](https://github.com/cydiz/freeaivideo-prompt-kit/issues), using fictional or sanitized inputs. Do not attach credentials or private images.
+
+## Additional distribution artifacts
+
+The `codex/free-distribution-20261114` branch adds independent adapters for the same offline planning tool:
+
+- [Static browser tool](integrations/static-space): local browser validation and Markdown downloads passed in all four modes. The public Hugging Face Space has been created; its tool upload is still pending.
+- [Chrome extension source](integrations/chrome-extension) and [ZIP](downloads/freeaivideo-offline-prompt-kit-chrome.zip): requests no host or privileged API permissions. Store registration is postponed; not submitted or published there.
+- [VS Code extension source](integrations/vscode-extension) and [VSIX](downloads/freeaivideo-prompt-kit.vsix): four-mode validation/export and three invalid-input cases passed in a real VS Code extension host. Marketplace publisher registration and publication remain pending.
+- [Docker context](integrations/docker): prepared only; the image has not been built or pushed because the local Docker engine is unavailable.
+- [Original offline starter kit](downloads/freeaivideo-offline-starter-kit.zip): self-contained browser tool, four example briefs and English tutorials. The single-file tool passed HTTP-preview validation and Markdown download; the automated browser does not support file-protocol verification. Gumroad listing remains pending.
+
+These are source/download artifacts, not evidence that every marketplace listing is live. No website source, backend implementation, credentials, production configuration, private workflow or model weights are included.
