@@ -23,4 +23,4 @@ Starting without an image? Try the text-to-video exercise. Have a photo you are 
 
 [GitHub: freeaivideo-prompt-kit](https://github.com/cydiz/freeaivideo-prompt-kit) contains original source code, examples, tests, and an MIT license. It validates local creative briefs and exports Markdown. It is not a generation API or a local model, and contains no model weights. This Notion tutorial center is in English. The independent repository provides the same planning exercises and runnable examples.
 
-Use the repository README for source instructions, or check the exact npm version before installing. A proposed package name is not evidence that a version is available.
+[Version 0.1.0 is published on npm](https://www.npmjs.com/package/freeaivideo-prompt-kit/v/0.1.0). Install with `npm install --global freeaivideo-prompt-kit@0.1.0`. The exact registry version passed a fresh installation check, its JavaScript API and 12 CLI export workflows. Source instructions remain available in the README.

@@ -2,7 +2,7 @@
 
 Turn a loose image or video idea into a clear, reusable creative brief. This independent **offline** CLI and JavaScript library validates a local JSON format, assembles prompt text, and exports Markdown.
 
-[Free AI Video](https://freeaivideo.art) · [English tutorials](docs/index.md) · [Notion tutorial center](https://frequent-option-c81.notion.site/4170d247536b810a80eefc76c33806f5)
+[npm 0.1.0](https://www.npmjs.com/package/freeaivideo-prompt-kit/v/0.1.0) · [Free AI Video](https://freeaivideo.art) · [English tutorials](docs/index.md) · [Notion tutorial center](https://frequent-option-c81.notion.site/4170d247536b810a80eefc76c33806f5)
 
 ## What it does
 
@@ -17,7 +17,7 @@ The tool makes no network requests, reads no reference images, uploads nothing a
 
 Requires Node.js 20 or later. Zero runtime dependencies. No account or API key is needed for the offline tool.
 
-For the registry release, install the exact version below. If the registry returns 404, use the source commands instead; do not substitute a similarly named package:
+**Published:** `freeaivideo-prompt-kit@0.1.0` is available from npm. The exact registry version has passed fresh installation, JavaScript API and 12 CLI export checks. Install with:
 
 ```sh
 npm install --global freeaivideo-prompt-kit@0.1.0
