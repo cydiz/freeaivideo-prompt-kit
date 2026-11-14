@@ -1,43 +1,43 @@
-# 文生视频：写清一个镜头
+# Text to Video: Plan One Clear Shot
 
-目标：在不提交生成的情况下，完成一份能逐项修改的短视频提示词。适合第一次规划产品小片段的创作者。
+Prepare a short video prompt that you can revise one part at a time, without submitting a generation task. This exercise is intended for creators planning a simple product scene.
 
-## 准备
+## Before you start
 
-写下一种主体、一种主要动作和一种镜头运动。示例使用虚构的陶杯场景，无需图片、账号或 API Key。在线接续入口：[Video studio](https://freeaivideo.art/studio/video-tools)。
+Choose one subject, one main action, and one camera movement. The fictional ceramic-cup example needs no image, account, or API key. Online continuation: [Free AI Video Video studio](https://freeaivideo.art/studio/video-tools).
 
-## 步骤
+## Steps
 
-1. 固定主体：“木桌上的手工陶杯”，不要同时加入多组人物和多个地点。
-2. 指定动作：“杯子保持静止，热气缓慢升起”。主体动作与镜头动作分开写，避免把“旋转”同时用于杯子和镜头。
-3. 指定镜头：“单镜头，缓慢推近”。第一次不同时要求环绕、变焦和切镜。
-4. 补充环境与光线：“干净的室内工作台，左侧柔和窗光”。再加一种视觉风格即可。
-5. 保存版本 A。版本 B 只改一项，例如把缓慢推近改成固定机位。保留文字记录，便于以后对比。
+1. Fix the subject: “a handmade ceramic cup on a wooden table.” Avoid introducing several groups of people and locations in the same first prompt.
+2. Specify the action: “the cup stays still while steam rises gently.” Describe subject motion separately from camera motion so that a word such as “rotate” has a clear meaning.
+3. Specify the camera: “a single shot with a slow push-in.” Avoid requesting an orbit, zoom, and scene cut at the same time for your first attempt.
+4. Add setting and light: “a clean studio background with soft window light from the left.” One visual style is enough to begin.
+5. Save version A. For version B, change only one variable, such as replacing the slow push-in with a locked camera. Keep a written record for a later comparison.
 
-## 原创示例
+## Original example
 
-```text
-木桌上的手工陶杯，杯子保持静止，热气缓慢升起。
-单镜头，镜头缓慢推近；左侧柔和窗光，干净的室内背景。
-暖色调，保留陶器表面质感；避免额外文字和标志。
+```txt
+A handmade ceramic cup sits on a wooden table. The cup stays still while steam rises gently.
+Single shot with a slow camera push-in. Soft window light from the left and a clean indoor background.
+Warm neutral colors and visible ceramic texture. Avoid added lettering or logos.
 ```
 
-这是一份创作意图示例，不是已生成效果。它不保证模型服从每个细节。
+This example is a creative intention, not a generated result. It does not guarantee that a model will follow every detail.
 
-## 网站可用后的接续
+## Continue when the website is available
 
-打开 Free AI Video 视频工作区并展开 Create，选择当日界面提供的 Text to Video 和可用模型。手动粘贴提示词，检查当前输入限制与积分消耗，再由你决定是否提交。等待任务状态；出现结果后先预览再下载。不要在等待期间连续点击提交。
+Open the video studio and expand Create. Select Text to Video and a working model offered by the current interface. Manually paste the prompt, check the input limits and displayed credit cost, then decide whether to submit. Wait for the task status; if a result is available, preview it before downloading. Avoid clicking submit repeatedly while waiting.
 
-截至 2026-11-13，公网生成链路尚未验收。模型选项的存在不能证明已配置或可成功调用；本教程不承诺视频时长、分辨率、速度或免费次数。
+As of November 14, 2026, HTTPS access is available. Image and video generation and PayPal sandbox payments have passed isolated local acceptance tests, but those fixes have not been deployed to the public website. Public generation and checkout remain unverified; Google sign-in and real subscription renewals are also unverified. Check the live interface before submitting or purchasing. The offline exercises remain usable without an account. A visible model name does not establish availability. This guide does not promise a particular duration, resolution, speed, or number of free attempts.
 
-## 验证与排查
+## Check and troubleshoot
 
-- 读完后不能指出谁在动：重写动作句，让主体动作与镜头动作各占一句。
-- 画面要求互相冲突：删除一个动作或一种光线，先把单镜头目标写一致。
-- 提示词过长：保留主体、主要动作、镜头和光线；删掉重复形容词。
-- 生成失败或等待很久：先查任务状态和积分记录，再判断是否重试；浏览器等待超时本身不证明后台任务已取消。
-- 结果没有按要求执行：一次只改一个变量；本工具和教程都无法保证确定性输出。
+- Unclear movement: give the subject action and camera movement separate sentences.
+- Conflicting requirements: remove one action or lighting instruction and make the single-shot goal consistent.
+- Prompt too long: retain the subject, main action, camera, and light; remove repeated adjectives.
+- Failure or long wait: check the task status and credit history before deciding to retry. A browser timeout alone does not establish that the backend task was cancelled.
+- Result differs from the description: change one variable at a time. Neither this guide nor the tool guarantees deterministic output.
 
-## 离线保存
+## Save an offline plan
 
-可把主体与动作填进辅助工具的 JSON 简报，运行校验和 Markdown 导出。详见[离线工具教程](04-offline-tool.md)。返回[产品网站](https://freeaivideo.art)前，先确认网络访问和服务条件。
+Put your subject and action into a JSON brief, validate it, and export Markdown using the [Offline Prompt Kit: Validate, Export & Troubleshoot](04-offline-tool.md). Before returning to [Free AI Video](https://freeaivideo.art), check current access and service conditions.

@@ -1,34 +1,34 @@
-# 开始前：免费条件、积分和网站可用性
+# Getting Started: Free Access, Credits & Availability
 
-目标：区分离线准备与在线生成，避免把产品名称中的“Free”理解成没有任何限制。
+Learn the difference between free offline preparation and online media generation. The word “Free” in the product name does not mean every generation is unlimited or free of charge.
 
-## 准备
+## Before you start
 
-你只需要一个文本编辑器即可开始。使用辅助 CLI 时需要 Node.js 20 或更新版本。产品入口：[Free AI Video](https://freeaivideo.art)，视频工作区：[Video studio](https://freeaivideo.art/studio/video-tools)，图片工作区：[Image studio](https://freeaivideo.art/studio/image-tools)。
+A text editor is enough for the planning exercises. The optional offline CLI requires Node.js 20 or later. Product links: [Free AI Video](https://freeaivideo.art), [Video studio](https://freeaivideo.art/studio/video-tools), and [Image studio](https://freeaivideo.art/studio/image-tools).
 
-## 步骤
+## Steps
 
-1. 先写下一句明确的目标，例如“制作一段陶杯热气缓慢升起的单镜头视频”。把产品拍摄、叙事片段和效果实验分开，第一次只做一种。
-2. 决定输入方式：只有文字时准备文生视频；已有合法照片时准备图生视频。图片创作也分文字输入与参考图输入。
-3. 网站可访问后，打开对应工作区，展开 Create，查看当前可选模式、模型与输入要求。页面中出现模型名不代表该服务当前已经可用。
-4. 在线提交前先登录，查看账户可用积分以及当前提交按钮附近的消耗提示。如果余额不足或模型不可用，停在准备阶段，不要反复提交。
-5. 需要购买时先阅读当日价格和付款条款，并确认结算流程已经开放。当前教程没有完成购买验收，不引导你假设支付可用。
+1. Write one concrete goal, such as “plan a single shot of steam rising from a ceramic cup.” Keep product footage, story scenes, and visual experiments separate for your first exercise.
+2. Choose an input approach. Prepare text-to-video if you only have a written idea, or image-to-video if you have a photo you are authorized to use. Image planning likewise supports text-based and reference-based approaches.
+3. Once the website is accessible, open the corresponding studio and expand Create. Check the modes, model options, and input requirements available that day. A model appearing in a menu does not establish that its service is currently configured or available.
+4. Before an online submission, sign in and review your available credits and the current cost shown near the generation controls. If credits are insufficient or the service is unavailable, keep working on the brief rather than submitting repeatedly.
+5. If you later consider purchasing credits, review the current prices and payment terms and confirm that checkout is available. This tutorial has not verified a purchase flow and does not assume that a listed plan can be purchased.
 
-## 哪些免费
+## What is free?
 
-本中心的原创教程、示例和离线工具按 MIT 免费使用，不需要网站账号。网站生成需要登录和可用积分，并依赖模型服务。未确认稳定开放的新用户赠送额度，不承诺注册即送、每日免费次数或无限免费。网页展示的示例预览与实际提交生成是两种操作。
+The original tutorials, examples, and offline tool are free to use under MIT and do not require a website account. Website generation requires sign-in, available credits, and a working model service. No standing signup allowance, daily free quota, or unlimited free tier has been confirmed. Watching a preview and submitting a generation task are separate actions.
 
-截至 2026-11-13，核对依据是当前项目代码；域名访问配置仍在处理中，公网生成及支付尚未验收。页面虽列有一次性积分包和月度计划，标价并不等于已能购买。实时条件应以恢复后的页面、账户余额和提交提示为准。
+As of November 14, 2026, HTTPS access is available. Image and video generation and PayPal sandbox payments have passed isolated local acceptance tests, but those fixes have not been deployed to the public website. Public generation and checkout remain unverified; Google sign-in and real subscription renewals are also unverified. Check the live interface before submitting or purchasing. The offline exercises remain usable without an account. The current local catalog lists one-time packs from \$4.99 and monthly plans from \$3.99 (USD). Monthly plans renew automatically; packs do not. These prices are code-verified, not a claim that public checkout is ready; review current prices, credits and terms on the pricing page.
 
-## 自查
+## Check your progress
 
-完成后，你应有一份不含私人资料的创作目标，并能说清：输入方式、是否需要参考图、在线生成需要哪些条件。你无需在此阶段提交生成或付款。
+You should have a brief without personal information and be able to identify your input approach, whether a reference image is needed, and what online generation requires. You do not need to generate anything or pay to complete this exercise.
 
-## 故障排查
+## Troubleshooting
 
-- 网站打不开、显示停放页或证书错误：先停止在线操作，继续离线准备；不要绕过浏览器证书警告。
-- 看不到编辑器：检查工作区的 Create/Expand 入口。界面可能随更新变化。
-- 提示登录或积分不足：离线工具不会解决账户余额问题。核查网站账户，不向第三方提供密码。
-- 没看到教程提到的模式：以当日界面为准，不能用离线简报强制开启模型能力。
+- Site unavailable, parking page, or certificate warning: pause online steps and continue offline. Do not bypass browser certificate warnings.
+- Editor not visible: look for Create or Expand in the studio. The interface may change with updates.
+- Sign-in or insufficient-credit notice: the offline tool cannot change your account balance. Review your account without sharing your password with third parties.
+- A described mode is missing: follow the current interface. An offline brief cannot enable a model capability.
 
-下一步：阅读[文生视频教程](02-text-to-video.md)，把目标压缩成一个可描述的镜头。
+Next: [Text to Video: Plan One Clear Shot](02-text-to-video.md).

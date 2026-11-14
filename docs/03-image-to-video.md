@@ -1,47 +1,47 @@
-# 图生视频：整理参考图与动作
+# Image to Video: Prepare a Reference & Motion Brief
 
-目标：为已有产品照片准备一个幅度较小、描述清楚的动画计划。适合有权使用原始照片的创作者。
+Plan a restrained animation for an existing product photo. This exercise is intended for creators who have the right to use their reference material.
 
-## 准备
+## Before you start
 
-选择自己拍摄或已获授权的清晰照片。避免把不必要的人脸、个人信息和私有资料用于演示。工具示例中的文件名只是本地提醒，不附带图片，也不会访问或上传图片。
+Choose a clear photo you took yourself or are otherwise authorized to use. Avoid including unnecessary faces, personal information, or private material in examples. A reference filename in the tool is only a reminder: no picture is bundled, read, or uploaded.
 
-在线接续入口：[Free AI Video 视频工作区](https://freeaivideo.art/studio/video-tools)。
+Online continuation: [Free AI Video Video studio](https://freeaivideo.art/studio/video-tools).
 
-## 步骤
+## Steps
 
-1. 检查照片主体与构图。用一张杯子照片开始，比同时处理多个运动主体更便于描述目标。
-2. 写下需要保留的内容，例如“保留杯子的形状、颜色和桌面布局”。这是一项意图，不能保证模型完全保持。
-3. 只设计一个轻微动作，例如热气上升、帘子轻动或镜头慢推。避免第一次就要求大幅变形与多个场景跳转。
-4. 创建图生视频简报，填入自己辨认得出的参考图文件名，例如 `my-authorized-cup-photo.png`。
-5. 保存简报，并人工核对参考图是否确实有使用权。校验器不能判断版权、肖像权或素材真实性。
+1. Review the subject and composition. A photo of one cup makes the intended movement easier to describe than several independently moving subjects.
+2. Write down what you hope to preserve, such as the cup’s shape, color, and placement on the table. This expresses an intention; it cannot guarantee exact preservation.
+3. Choose one subtle movement: rising steam, a lightly moving curtain, or a slow camera push-in. Avoid combining major transformations and multiple scene changes in the first plan.
+4. Create an image-to-video brief and add a recognizable reference reminder, such as <code>my-authorized-cup-photo.png</code>.
+5. Save the brief and manually confirm your rights to the image. The validator cannot assess copyright, likeness rights, or authenticity.
 
-## 原创简报片段
+## Original brief example
 
 ```json
 {
   "version": 1,
   "mode": "image-to-video",
-  "subject": "参考图中的手工陶杯，保留原有形状和颜色",
-  "action": "热气轻轻上升，杯子不移动",
-  "camera": "固定机位，单镜头",
-  "lighting": "维持参考图的柔和窗光",
+  "subject": "The handmade ceramic cup in the reference image; preserve its shape and color",
+  "action": "Steam rises gently while the cup stays still",
+  "camera": "Locked camera, single shot",
+  "lighting": "Keep the soft window light from the reference",
   "reference": "my-authorized-cup-photo.png"
 }
 ```
 
-## 网站可用后的接续
+## Continue when the website is available
 
-打开视频工作区，展开 Create，选择当日可用的 Image to Video。按界面要求上传有权使用的参考图，选择可用模型，并手动粘贴导出的提示词。核对图片已上传、积分余额和消耗提示后，再决定是否提交。
+Open the video studio, expand Create, and choose the currently available Image to Video mode. Upload an authorized reference according to the interface, select an available model, and manually paste your assembled prompt. Check that the image has uploaded, review your balance and the displayed credit cost, then decide whether to submit.
 
-上传素材是在线操作，离线工具不会代你完成。文件类型、尺寸、时长和模型支持以当前界面为准。本教程没有验证公网生成结果，不承诺身份、文字、商标或产品细节绝对一致。
+Uploading is an online action that the offline tool does not perform. Follow the current interface for supported file types, sizes, durations, and model capabilities. This guide has not verified public generation results and does not promise exact identity, text, trademark, or product-detail preservation.
 
-## 验证与排查
+## Check and troubleshoot
 
-- 校验报 `reference is required`：填写本地素材提醒。仅填写文件名不等于网站已经上传。
-- 网站仍提示缺少参考图：在网站中检查实际上传状态，不能把简报文件名当作上传结果。
-- 生成时主体变化明显：减少运动与风格要求，明确希望保留的元素；仍可能受模型能力限制。
-- 上传失败：核对当前文件要求和网络状态；不要把私有素材传到陌生“修复”网站。
-- 出现第三方服务不可用或积分问题：停止重复提交，查看账户与任务记录。
+- <code>reference is required</code>: add a reference reminder to the brief. A filename is not a website upload.
+- Website still requests an image: check the actual upload state in the studio. The brief cannot confirm that an upload completed.
+- Subject changes too much: reduce motion and style requirements and clarify what you want preserved. Model limitations still apply.
+- Upload fails: review current file requirements and connectivity. Do not send private material to an unfamiliar “repair” site.
+- Service or credit error: stop repeated submissions and review account and task records.
 
-图片计划也可改为 `image-to-image`，但这只是简报模式选择，不会自动开启网站的高级编辑能力。下一步阅读[校验和导出教程](04-offline-tool.md)。产品入口：[Free AI Video](https://freeaivideo.art)。
+For a still-image plan, you can instead choose <code>image-to-image</code>. Changing a brief’s mode does not enable advanced website editing capabilities. Next: [Offline Prompt Kit: Validate, Export & Troubleshoot](04-offline-tool.md). Product: [Free AI Video](https://freeaivideo.art).

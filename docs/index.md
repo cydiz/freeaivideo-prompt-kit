@@ -1,20 +1,26 @@
-# Free AI Video 中文教程中心
+# Free AI Video Tutorials — Creative Planning & Offline Tools
 
-先把一个想法整理清楚，再决定是否提交生成。这里面向中文内容创作者，提供可以离线完成的练习，以及网站可用后如何手动接续的步骤。
+Turn a loose idea into a clear creative brief before deciding whether to submit a generation task. These original guides help video and image creators prepare prompts, organize reference material, and save plans for later use.
 
-产品入口：[Free AI Video](https://freeaivideo.art)。截至 2026-11-13，公网生成与支付流程尚未完成验收，网站域名访问配置仍在处理中；如果打不开，请先完成离线练习。没有任何教程步骤要求提供 API Key。
+[Visit Free AI Video](https://freeaivideo.art). As of November 14, 2026, HTTPS access is available. Image and video generation and PayPal sandbox payments have passed isolated local acceptance tests, but those fixes have not been deployed to the public website. Public generation and checkout remain unverified; Google sign-in and real subscription renewals are also unverified. Check the live interface before submitting or purchasing. The offline exercises remain usable without an account. No tutorial asks you to provide an API key.
 
-## 阅读路线
+## Choose a guide
 
-1. [开始前：免费条件、积分和网站可用性](01-start.md)：区分免费离线工具与需要积分的网站生成。
-2. [文生视频：写清一个镜头](02-text-to-video.md)：用陶杯练习主体、动作、镜头和对照修改。
-3. [图生视频：整理参考图与动作](03-image-to-video.md)：选择有权使用的参考图，准备小幅动作。
-4. [离线简报：校验、导出和排查](04-offline-tool.md)：运行 CLI，修复 JSON，导出可保存的计划。
+1. [Getting Started: Free Access, Credits & Availability](01-start.md) — understand which preparation steps are free and what online generation requires.
+2. [Text to Video: Plan One Clear Shot](02-text-to-video.md) — define a subject, action, camera movement, and a simple revision.
+3. [Image to Video: Prepare a Reference & Motion Brief](03-image-to-video.md) — organize an authorized photo and describe restrained motion.
+4. [Offline Prompt Kit: Validate, Export & Troubleshoot](04-offline-tool.md) — run the CLI, fix JSON errors, and export a reusable Markdown plan.
 
-## 免费与限制
+## Free access and limits
 
-原创教程和独立离线工具按 MIT 免费使用。网站生成需要登录、可用积分和可用服务；新用户免费积分尚未确认。工具不会生成视频或图片，也不会校验模型参数或估计价格。示例仅表达创作意图，未附带生成结果或效果保证。
+These original tutorials, examples, and the independent offline tool are free under the MIT license. Website generation requires sign-in, sufficient available credits, and a working model service. A standing new-user credit allowance has not been confirmed. The tool does not generate media, validate model parameters, or estimate prices. Examples describe creative intentions; they are not generated results or quality guarantees.
 
-## 从哪里开始
+## Where to begin
 
-没有素材：先完成文生视频教程。已有合法图片：先看图生视频教程。想把需求交给同事：使用 Markdown 导出，分享前检查简报里是否包含个人资料或私有链接。
+Starting without an image? Try the text-to-video exercise. Have a photo you are allowed to use? Start with the image-to-video guide. Preparing a handoff? Export Markdown, then review it for personal information and private links before sharing.
+
+## Independent offline tool
+
+[GitHub: freeaivideo-prompt-kit](https://github.com/cydiz/freeaivideo-prompt-kit) contains original source code, examples, tests, and an MIT license. It validates local creative briefs and exports Markdown. It is not a generation API or a local model, and contains no model weights. This Notion tutorial center is in English. The independent repository provides the same planning exercises and runnable examples.
+
+Use the repository README for source instructions, or check the exact npm version before installing. A proposed package name is not evidence that a version is available.

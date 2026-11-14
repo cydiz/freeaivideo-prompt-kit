@@ -1,55 +1,57 @@
-# 离线简报：校验、导出和排查
+# Offline Prompt Kit: Validate, Export & Troubleshoot
 
-目标：把提示词拆成可复用字段，发现格式问题，导出可以交接的 Markdown。工具不生成图片或视频，不调用网站接口，不需要账号或 API Key。
+Turn a prompt into reusable fields, catch format errors, and export a Markdown plan for a handoff. The tool does not generate media or call website interfaces. No account or API key is required.
 
-## 准备
+## Before you start
 
-安装 Node.js 20 或更新版本，并取得本独立工具仓库或已审查的 npm tarball。下面的 `node bin/cli.js` 命令在仓库目录内运行，不依赖 npm 发布状态。registry 版本发布后，可用 `npm install --global freeaivideo-prompt-kit@0.1.0` 安装；若返回 404，说明该版本尚不可从 registry 安装。
+Install Node.js 20 or later and obtain the source from the [independent GitHub repository](https://github.com/cydiz/freeaivideo-prompt-kit), or an inspected npm tarball. Run the <code>node bin/cli.js</code> commands below inside the repository directory; they do not depend on registry publication. The repository provides runnable examples and documentation for this offline format.
 
-## 步骤
+Version 0.1.0 is not currently published to the npm registry. Once published, it could be installed with <code>npm install --global freeaivideo-prompt-kit@0.1.0</code>. A registry 404 means that version is not available there; do not substitute a similarly named package.
 
-1. 生成一份示例到新文件。注意终端重定向会覆盖同名文件：
+## Steps
 
-```sh
+1. Create an example using a new filename. Shell redirection overwrites an existing file with the same name:
+
+```bash
 node bin/cli.js init --mode text-to-video > my-brief.json
 ```
 
-2. 用编辑器修改主体、动作、环境、镜头、光线和风格，保持 JSON 语法有效。所有示例都是原创创作意图，没有附带生成效果。
-3. 运行校验：
+2. Use a text editor to change the subject, action, setting, camera, lighting, and style while keeping valid JSON. The examples are original creative intentions, not generated results.
+3. Validate the brief:
 
-```sh
+```bash
 node bin/cli.js validate my-brief.json
 ```
 
-成功时 JSON 中 `valid` 为 `true`，命令退出码为 0。视频缺少动作可能只给出 warning；通过校验不证明模型会实现描述。
+A successful check returns <code>valid: true</code> in JSON and exits with code 0. Missing video action text can produce a warning rather than an error. Passing validation does not establish that a model can implement the description.
 
-4. 导出提示词和 Markdown，分别选择不会覆盖原文件的新文件名：
+4. Export a prompt and Markdown, choosing new output filenames:
 
-```sh
+```bash
 node bin/cli.js render my-brief.json --format prompt > my-prompt.txt
 node bin/cli.js render my-brief.json --format markdown > my-plan.md
 ```
 
-5. 人工检查内容。网站恢复后，可以把 `my-prompt.txt` 的文本手动粘贴到 [Free AI Video](https://freeaivideo.art) 对应工作区；网站的登录、积分和服务可用条件另行适用。
+5. Review the output yourself. Once the website is accessible, manually paste the text from <code>my-prompt.txt</code> into the appropriate [Free AI Video](https://freeaivideo.art) studio. Website sign-in, credits, and service availability are separate requirements.
 
-## 校验范围
+## Validation scope
 
-支持 `text-to-video`、`image-to-video`、`text-to-image` 和 `image-to-image`。`version: 1`、合法 `mode`、非空 `subject` 必填；图生模式还需要 `reference` 提醒。每个文本字段最多 500 个 UTF-16 代码单元，组合提示词最多 2000 个；CLI 输入最多 64 KiB。
+Supported planning modes: <code>text-to-video</code>, <code>image-to-video</code>, <code>text-to-image</code>, and <code>image-to-image</code>. A brief requires <code>version: 1</code>, a supported <code>mode</code>, and a nonempty <code>subject</code>. Image-to modes also require a <code>reference</code> reminder. Each text field is limited to 500 UTF-16 code units, and the assembled prompt to 2,000. CLI input is limited to 64 KiB.
 
-这些是工具自身的格式规则。工具不支持模型参数校验、图片读取、时长或分辨率设置、价格估算、自动提交与批量生成。`avoid` 被组合进提示词，不是模型专用负面提示词参数。参考图字段永远不会被读取或上传。
+These are the tool’s own format rules. It does not validate model parameters, read images, set duration or resolution, estimate prices, submit tasks, or generate batches. <code>avoid</code> becomes a line of prompt text, not a model-specific negative-prompt parameter. Reference text is never read as a file or uploaded.
 
-## 故障排查
+## Troubleshooting
 
-- `Input error` / JSON 解析失败：检查双引号、逗号和括号；不要在 JSON 内写注释。
-- `Unknown field`：删除不支持的字段；例如 `duration` 或 API Key 都不是这个格式的字段。
-- `subject is required`：补充非空主体，只有空格不算有效内容。
-- `reference is required`：图生模式需要一条素材提醒，仍需你在网站中另行上传。
-- 长度超限：删掉重复修饰语，并拆分多个创作目标。
-- 文件找不到：检查当前目录和文件路径，含空格的路径加引号。
-- 不明退出码：0 成功、1 输入或校验失败、2 命令用法错误；用 `node bin/cli.js --help` 查看帮助。
+- <code>Input error</code> or JSON parse error: check double quotes, commas, and brackets. JSON does not accept comments.
+- <code>Unknown field</code>: remove unsupported fields. <code>duration</code> and API keys are not part of this brief format.
+- <code>subject is required</code>: add a nonempty subject; whitespace alone is not valid.
+- <code>reference is required</code>: add a reminder for an image-to mode. Uploading to the website remains a separate manual action.
+- Length error: remove repetition or split different creative goals into separate briefs.
+- File not found: check the working directory and path, and quote paths containing spaces.
+- Exit code unclear: 0 means success, 1 means invalid input or brief, and 2 means command usage error. Run <code>node bin/cli.js --help</code> for help.
 
-## 免费与授权
+## Free access and license
 
-原创工具、教程和示例按 MIT 免费使用，不需要注册。它们不包含网站商业模板、后台服务或模型权重。分享 Markdown 或 JSON 前自行检查私人内容；不要把密钥和未授权素材放入公开仓库。网站生成不会因为使用离线工具而免除积分或服务费用。
+The original tool, tutorials, and examples are free under MIT, without registration. They do not include the website’s commercial template, backend services, or model weights. Review private content before sharing JSON or Markdown, and keep credentials and unauthorized material out of public repositories. Using the offline tool does not waive website generation credit or service charges.
 
-截至 2026-11-13，网站公网生成和支付流程尚未完成验收。返回[教程目录](index.md)，选择一个单镜头练习继续准备即可，无需重复提交在线任务。
+As of November 14, 2026, HTTPS access is available. Image and video generation and PayPal sandbox payments have passed isolated local acceptance tests, but those fixes have not been deployed to the public website. Public generation and checkout remain unverified; Google sign-in and real subscription renewals are also unverified. Check the live interface before submitting or purchasing. The offline exercises remain usable without an account. Return to the [Free AI Video Tutorials — Creative Planning & Offline Tools](index.md) to continue a single-shot planning exercise without repeatedly submitting online tasks.
