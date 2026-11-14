@@ -107,10 +107,10 @@ Report reproducible issues through [GitHub Issues](https://github.com/cydiz/free
 
 The `codex/free-distribution-20261114` branch adds independent adapters for the same offline planning tool:
 
-- [Static browser tool](integrations/static-space): local browser validation and Markdown downloads passed in all four modes. The public Hugging Face Space has been created; its tool upload is still pending.
+- [Static browser tool](integrations/static-space): local browser validation and Markdown downloads passed in all four modes. The [public Hugging Face Space](https://huggingface.co/spaces/cnblion/freeaivideo-offline-prompt-kit) is running. Seven anonymous browser checks passed, including actual Markdown downloads in four modes, unknown-field rejection, stale-export protection and mobile layout.
 - [Chrome extension source](integrations/chrome-extension) and [ZIP](downloads/freeaivideo-offline-prompt-kit-chrome.zip): requests no host or privileged API permissions. Store registration is postponed; not submitted or published there.
 - [VS Code extension source](integrations/vscode-extension) and [VSIX](downloads/freeaivideo-prompt-kit.vsix): four-mode validation/export and three invalid-input cases passed in a real VS Code extension host. Marketplace publisher registration and publication remain pending.
-- [Docker context](integrations/docker): prepared only; the image has not been built or pushed because the local Docker engine is unavailable.
-- [Original offline starter kit](downloads/freeaivideo-offline-starter-kit.zip): self-contained browser tool, four example briefs and English tutorials. The single-file tool passed HTTP-preview validation and Markdown download; the automated browser does not support file-protocol verification. Gumroad listing remains pending.
+- [Docker context](integrations/docker): the local engine is running, but the image build was blocked by a timeout reaching Docker's official authentication endpoint. No image was built or pushed.
+- [Original offline starter kit](downloads/freeaivideo-offline-starter-kit.zip): self-contained browser tool, four example briefs and English tutorials. The single-file tool passed HTTP-preview validation and Markdown download; the automated browser does not support file-protocol verification. The $0 Gumroad product and ZIP are saved as a draft; publication is blocked by the platform's payout-method prerequisite and is paused at the owner's request.
 
 These are source/download artifacts, not evidence that every marketplace listing is live. No website source, backend implementation, credentials, production configuration, private workflow or model weights are included.
