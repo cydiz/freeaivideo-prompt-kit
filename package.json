@@ -1,6 +1,6 @@
 {
   "name": "freeaivideo-prompt-kit",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Offline creative brief validation, prompt assembly and Markdown export for video and image planning.",
   "type": "module",
   "license": "MIT",

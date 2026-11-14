@@ -4,9 +4,9 @@ Turn a prompt into reusable fields, catch format errors, and export a Markdown p
 
 ## Before you start
 
-Install Node.js 20 or later and obtain the source from the [independent GitHub repository](https://github.com/cydiz/freeaivideo-prompt-kit), or an inspected npm tarball. Run the <code>node bin/cli.js</code> commands below inside the repository directory; they do not depend on registry publication. The repository provides runnable examples and documentation for this offline format.
+Install Node.js 20 or later and obtain the source from the [independent GitHub repository](https://github.com/cydiz/freeaivideo-prompt-kit), or an inspected npm tarball. Run the `node bin/cli.js` commands below inside the repository directory; they do not depend on registry publication. The repository provides runnable examples and documentation for this offline format.
 
-Version 0.1.0 is not currently published to the npm registry. Once published, it could be installed with <code>npm install --global freeaivideo-prompt-kit@0.1.0</code>. A registry 404 means that version is not available there; do not substitute a similarly named package.
+Install the registry release with `npm install --global freeaivideo-prompt-kit@0.1.1`. For a global install, replace `node bin/cli.js` below with `freeaivideo-prompt-kit`. If a registry error occurs, use source instructions instead of substituting a similarly named package.
 
 ## Steps
 
@@ -23,7 +23,7 @@ node bin/cli.js init --mode text-to-video > my-brief.json
 node bin/cli.js validate my-brief.json
 ```
 
-A successful check returns <code>valid: true</code> in JSON and exits with code 0. Missing video action text can produce a warning rather than an error. Passing validation does not establish that a model can implement the description.
+A successful check returns `valid: true` in JSON and exits with code 0. Missing video action text can produce a warning rather than an error. Passing validation does not establish that a model can implement the description.
 
 4. Export a prompt and Markdown, choosing new output filenames:
 
@@ -32,23 +32,23 @@ node bin/cli.js render my-brief.json --format prompt > my-prompt.txt
 node bin/cli.js render my-brief.json --format markdown > my-plan.md
 ```
 
-5. Review the output yourself. Once the website is accessible, manually paste the text from <code>my-prompt.txt</code> into the appropriate [Free AI Video](https://freeaivideo.art) studio. Website sign-in, credits, and service availability are separate requirements.
+5. Review the output yourself. Once the website is accessible, manually paste the text from `my-prompt.txt` into the appropriate [Free AI Video](https://freeaivideo.art) studio. Website sign-in, credits, and service availability are separate requirements.
 
 ## Validation scope
 
-Supported planning modes: <code>text-to-video</code>, <code>image-to-video</code>, <code>text-to-image</code>, and <code>image-to-image</code>. A brief requires <code>version: 1</code>, a supported <code>mode</code>, and a nonempty <code>subject</code>. Image-to modes also require a <code>reference</code> reminder. Each text field is limited to 500 UTF-16 code units, and the assembled prompt to 2,000. CLI input is limited to 64 KiB.
+Supported planning modes: `text-to-video`, `image-to-video`, `text-to-image`, and `image-to-image`. A brief requires `version: 1`, a supported `mode`, and a nonempty `subject`. Image-to modes also require a `reference` reminder. Each text field is limited to 500 UTF-16 code units, and the assembled prompt to 2,000. CLI input is limited to 64 KiB.
 
-These are the tool’s own format rules. It does not validate model parameters, read images, set duration or resolution, estimate prices, submit tasks, or generate batches. <code>avoid</code> becomes a line of prompt text, not a model-specific negative-prompt parameter. Reference text is never read as a file or uploaded.
+These are the tool’s own format rules. It does not validate model parameters, read images, set duration or resolution, estimate prices, submit tasks, or generate batches. `avoid` becomes a line of prompt text, not a model-specific negative-prompt parameter. Reference text is never read as a file or uploaded.
 
 ## Troubleshooting
 
-- <code>Input error</code> or JSON parse error: check double quotes, commas, and brackets. JSON does not accept comments.
-- <code>Unknown field</code>: remove unsupported fields. <code>duration</code> and API keys are not part of this brief format.
-- <code>subject is required</code>: add a nonempty subject; whitespace alone is not valid.
-- <code>reference is required</code>: add a reminder for an image-to mode. Uploading to the website remains a separate manual action.
+- `Input error` or JSON parse error: check double quotes, commas, and brackets. JSON does not accept comments.
+- `Unknown field`: remove unsupported fields. `duration` and API keys are not part of this brief format.
+- `subject is required`: add a nonempty subject; whitespace alone is not valid.
+- `reference is required`: add a reminder for an image-to mode. Uploading to the website remains a separate manual action.
 - Length error: remove repetition or split different creative goals into separate briefs.
 - File not found: check the working directory and path, and quote paths containing spaces.
-- Exit code unclear: 0 means success, 1 means invalid input or brief, and 2 means command usage error. Run <code>node bin/cli.js --help</code> for help.
+- Exit code unclear: 0 means success, 1 means invalid input or brief, and 2 means command usage error. Run `node bin/cli.js --help` for help.
 
 ## Free access and license
 

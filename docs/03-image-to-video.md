@@ -13,7 +13,7 @@ Online continuation: [Free AI Video Video studio](https://freeaivideo.art/studio
 1. Review the subject and composition. A photo of one cup makes the intended movement easier to describe than several independently moving subjects.
 2. Write down what you hope to preserve, such as the cup’s shape, color, and placement on the table. This expresses an intention; it cannot guarantee exact preservation.
 3. Choose one subtle movement: rising steam, a lightly moving curtain, or a slow camera push-in. Avoid combining major transformations and multiple scene changes in the first plan.
-4. Create an image-to-video brief and add a recognizable reference reminder, such as <code>my-authorized-cup-photo.png</code>.
+4. Create an image-to-video brief and add a recognizable reference reminder, such as `my-authorized-cup-photo.png`.
 5. Save the brief and manually confirm your rights to the image. The validator cannot assess copyright, likeness rights, or authenticity.
 
 ## Original brief example
@@ -38,10 +38,10 @@ Uploading is an online action that the offline tool does not perform. Follow the
 
 ## Check and troubleshoot
 
-- <code>reference is required</code>: add a reference reminder to the brief. A filename is not a website upload.
+- `reference is required`: add a reference reminder to the brief. A filename is not a website upload.
 - Website still requests an image: check the actual upload state in the studio. The brief cannot confirm that an upload completed.
 - Subject changes too much: reduce motion and style requirements and clarify what you want preserved. Model limitations still apply.
 - Upload fails: review current file requirements and connectivity. Do not send private material to an unfamiliar “repair” site.
 - Service or credit error: stop repeated submissions and review account and task records.
 
-For a still-image plan, you can instead choose <code>image-to-image</code>. Changing a brief’s mode does not enable advanced website editing capabilities. Next: [Offline Prompt Kit: Validate, Export & Troubleshoot](04-offline-tool.md). Product: [Free AI Video](https://freeaivideo.art).
+For a still-image plan, you can instead choose `image-to-image`. Changing a brief’s mode does not enable advanced website editing capabilities. Next: [Offline Prompt Kit: Validate, Export & Troubleshoot](04-offline-tool.md). Product: [Free AI Video](https://freeaivideo.art).
